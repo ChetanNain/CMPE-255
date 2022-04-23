@@ -6,7 +6,7 @@
 | ------ | ------ | ------ |
 | Chetan Nain | 015761122 | ChetanNain |
 | Lavesh Jain | 015017145  | Laveshjain 11 |
-| Vamsidhar Reddy Menthem | 0159999191 | vamsidhar18 |
+| Vamsidhar Reddy Menthem | 015999191 | vamsidhar18 |
 
 
 # Book Recommendation System 
