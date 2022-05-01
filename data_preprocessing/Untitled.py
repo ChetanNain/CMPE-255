@@ -176,3 +176,15 @@ book_aut
 
 
 
+
+# In[141]:
+
+
+get_ipython().system('jupyter nbconvert *.ipynb --to python')
+
+
+# In[ ]:
+
+
+
+
