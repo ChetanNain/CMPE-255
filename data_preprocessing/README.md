@@ -27,8 +27,28 @@ The Interpolate() method is used to fill NA values in a dataframe, but instead o
 
 
 <p>
-    <img src="./images/null value dist.png" width="600" height="600" />
+    <img src="./images/null value dist.png" width="1000" height="600" />
 </p>
+
+## In our data set too we had 1000+ null values in the language_code column. So we tried to impute these null values. Applying the lambda function to replace the null values with the languages of the author who have written any other book in the dataset. We can pick the language code from any other book written by the author and can replace the null values. 
+
+<p>
+    <img src="./images/Lang with null.png" width="1000" height="600" />
+</p>
+
+## Just like we have done for Charles Dickens, The book with title 'The Christmas Carol' was missing the language code in the above dataset, but from the dataset we know Charles Dickens has written multiple books in English. 
+
+<p>
+    <img src="./images/CD with NA.png" width="1000" height="600" />
+</p>
+
+## So we will impute the values and replace the null values with the language code of the mode value obtained. 
+
+<p>
+    <img src="./images/CD without Na.png" width="1000" height="600" />
+</p>
+
+## This way  we were able to retrieve around 80% of the missing values from the dataset.
 
 
 ## 2. Detecting Outliers: 
@@ -44,16 +64,38 @@ Outliers were treated using the following methods:
  ### The below screenshot is the box plot for the average ratings.
  
  <p>
-    <img src="./images/box plot.png" width="600" height="600" />
+    <img src="./images/box plot.png" width="800" height="600" />
 </p>
  
  
   ### The below screenshot is the box plot for the year of publication of various books.
  
   <p>
-    <img src="./images/box plot 2.png" width="600" height="600" />
+    <img src="./images/box plot 2.png" width="800" height="600" />
 </p>
  
  
+ ## 3. Organizing the data by getting it into proper format so that it can be used for analysis. 
  
+ ## In the dataset we have to clean the data for multiple authors so that the authors that are comma separated can be splitted into multiple rows. This way they can come under proper analysis.
  
+  <p>
+    <img src="./images/Inital Author Count.png" width="1000" height="600" />
+</p>
+
+
+### Now from the above analysis we can see that the author Dean Koontz have written 47 books. But this may not be correct as the script is picking up only those books which have only Dean Koontz as author and not the books where Dean Koontz is a co-author.
+
+
+  <p>
+    <img src="./images/DK 64 count.png" width="1000" height="600" />
+</p>
+
+### So we will be doing the below operations to get the authors data into individual rows rather than in the form of comma separated values in a single cell.
+
+  <p>
+    <img src="./images/author comma sep.png" width="1000" height="600" />
+</p>
+
+
+### By the above operation we were able to get the right count of Dean Koontz books and also were able to bring the data in the right format so that its available for analysis.
