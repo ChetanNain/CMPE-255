@@ -26,12 +26,34 @@ These functions substitute NaN values with their own values. All of these functi
 The Interpolate() method is used to fill NA values in a dataframe, but instead of hard-coding the value, it employs various interpolation techniques to fill the missing values.
 
 
+<p>
+    <img src="./images/null value dist.png" width="600" height="600" />
+</p>
+
+
 ## 2. Detecting Outliers: 
 Outliers are extreme results that differ from previous data observations; they may suggest measurement variability or experimental mistakes. To put it another way, an outlier is an observation that deviates from a sample's main trend.
 
 Outliers were treated using the following methods:
+
  a.) Remove the outliers 
+ 
  b.) Substitute with the median or a fixed value
+ 
+ 
+ ### The below screenshot is the box plot for the average ratings.
+ 
+ <p>
+    <img src="./images/box plot.png" width="600" height="600" />
+</p>
+ 
+ 
+  ### The below screenshot is the box plot for the year of publication of various books.
+ 
+  <p>
+    <img src="./images/box plot 2.png" width="600" height="600" />
+</p>
+ 
  
  
  
