@@ -17,6 +17,8 @@ In today’s world where the number of options available for one product is incr
 
 This project is aimed to target the interest of book readers and recommend relevant books to readers. Book reading doesn’t come easy to everyone. Most people are very peculiar about the books they read. This is well justified as it isn’t as lucid as it looks. Two books can have similar storylines but have different writing styles or two books by the same author can have similar writing styles but an entirely different plot. Two books can be same but published in two different years or one can be the latest edition of the older one with some modifications. The fact that the data have so many features to consider, makes this project further interesting. 
 
+Dataset:
+The data has been collected from web using the Goodreads and Google books API. We extracted data of about 10k books and stored it in books_data as csv format. It includes features like book_id, ISBN number, title, author, ratings etc. Apart from this we extracted data for ratings as book_ratings_data and book tags as book_tags_data.
 # Methods
 
 We propose to build and train the recommender system model on the books data set. Recommender systems are an important class of machine learning algorithms that offer "relevant" suggestions to users. Recommender systems are generally divided into two main categories: collaborative filtering and content-based systems.
@@ -40,6 +42,12 @@ The content-based approach uses additional information about users and/or items.
 The main idea of content-based methods is to try to build a model, based on the available “features”, that explain the observed user-item interactions. Still considering users and movies, we can also create the model in such a way that it could provide us with an insight into why so is happening. Such a model helps us in making new predictions for a user pretty easily, with just a look at the profile of this user and based on its information, to determine relevant movies to suggest. 
 
 ![alt text](https://github.com/ChetanNain/CMPE-255-Final-Project/blob/main/images/recommend.png)
+
+##### Hybrid Recommendation:
+
+It is evident that both the techniques are equally good and complement each other. We explored and studied recommendation technologies based on content filtering and user collaborative filtering and propose a hybrid recommendation algorithm based on content and user collaborative filtering. This method not only makes use of the advantages of content filtering but also can carry out similarity matching filtering for all items, especially when the items are not evaluated by any user, which can be filtered out and recommended to users, thus avoiding the problem of early level. At the same time, this method also takes advantage of the advantages of collaborative filtering. When the number of users and evaluation levels are large, the user rating data matrix of collaborative filtering prediction will become relatively dense, which can reduce the sparsity of the matrix and make collaborative filtering more accurate. In this way, we will try to improve the system performance through the integration of the two.
+
+![alt text](https://github.com/ChetanNain/CMPE-255-Final-Project/blob/main/images/Hybrid.png)
 
 # Example Analysis
 
