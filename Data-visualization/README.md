@@ -5,19 +5,9 @@
 
 ### Top Rated Books
 
-    
-    Author : Vamsidhar
-    
-    This function takes in a dataframe and visualize Top rated books in the dataset
-    Params:
-    -------------------
-    input: books_data
-           =>dataframe
-    -------------------
-    
-    output: bar plot to visualize Top rated books in the dataset
-
 ![alt text](./Images/top_rated_books.png)
+
+Observation: The above plot helps us to visualize 15 top rated books. Maximum rating of about 4.85
 
 ### Average Ratings Distribution
     
