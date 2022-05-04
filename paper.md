@@ -29,9 +29,24 @@ Unlike collaborative methods that only rely on the user-item interactions, conte
 
 # Comparisons
 
+##### Collaborative filtering
+The Collaborative filtering method for recommender systems is based on the past interactions that have been recorded between users and items, in order to produce new recommendations. Collaborative Filtering tends to find what similar users would like. It typically classifies the users into clusters of similar types and recommends items to each user according to the preference of its cluster. 
+
+The main idea that governs the collaborative methods is that through past user-item interactions when processed through the system, it becomes sufficient to detect similar users or similar items to make predictions based on these estimated facts and insights.
+
+##### Content Based filtering
+The content-based approach uses additional information about users and/or items. This filtering method uses item features to recommend other items similar to what the user likes and also based on their previous actions or explicit feedback. If we consider the example for a books recommender system, the additional information can be, the age, the sex, the job or any other personal information for users as well as the category, the main character, the writing style, length or other characteristics for the books i.e the items. 
+
+The main idea of content-based methods is to try to build a model, based on the available “features”, that explain the observed user-item interactions. Still considering users and movies, we can also create the model in such a way that it could provide us with an insight into why so is happening. Such a model helps us in making new predictions for a user pretty easily, with just a look at the profile of this user and based on its information, to determine relevant movies to suggest. 
+
+![alt text](https://github.com/ChetanNain/CMPE-255-Final-Project/blob/main/images/recommend.png)
+
 # Example Analysis
 
 # Conclusions
 
 
 # References
+[1]
+D. H. Park, H. K. Kim, I. Y. Choi, and J. K. Kim, “A literature review and classification of recommender systems research,” vol. 39, no. 11, pp. 10059–10072, 2012, doi: https://doi.org/10.1016/j.eswa.2012.02.038.
+
