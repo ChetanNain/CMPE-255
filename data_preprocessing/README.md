@@ -85,7 +85,9 @@ Outliers were treated using the following methods:
 
 
 ### Now from the above analysis we can see that the author Dean Koontz have written 47 books. But this may not be correct as the script is picking up only those books which have only Dean Koontz as author and not the books where Dean Koontz is a co-author.
-
+  <p>
+    <img src="./images/DK list of book.png" width="1000" height="600" />
+</p>
 
   <p>
     <img src="./images/DK 64 count.png" width="1000" height="600" />
@@ -98,4 +100,8 @@ Outliers were treated using the following methods:
 </p>
 
 
-### By the above operation we were able to get the right count of Dean Koontz books and also were able to bring the data in the right format so that its available for analysis.
+### By the above operation we were able to get the right count of Dean Koontz books and also were able to bring the data in the right format. This format of data will help us do proper analysis related to authors.
+
+  <p>
+    <img src="./images/cleaned author.png" width="1000" height="400" />
+</p>
