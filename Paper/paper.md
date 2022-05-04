@@ -41,13 +41,13 @@ The content-based approach uses additional information about users and/or items.
 
 The main idea of content-based methods is to try to build a model, based on the available “features”, that explain the observed user-item interactions. Still considering users and movies, we can also create the model in such a way that it could provide us with an insight into why so is happening. Such a model helps us in making new predictions for a user pretty easily, with just a look at the profile of this user and based on its information, to determine relevant movies to suggest. 
 
-![alt text](https://github.com/ChetanNain/CMPE-255-Final-Project/blob/main/Report/Images/recommend.png)
+![alt text](https://github.com/ChetanNain/CMPE-255-Final-Project/blob/main/Paper/Images/recommend.png)
 
 ##### Hybrid Recommendation:
 
 It is evident that both the techniques are equally good and complement each other. We explored and studied recommendation technologies based on content filtering and user collaborative filtering and propose a hybrid recommendation algorithm based on content and user collaborative filtering. This method not only makes use of the advantages of content filtering but also can carry out similarity matching filtering for all items, especially when the items are not evaluated by any user, which can be filtered out and recommended to users, thus avoiding the problem of early level. At the same time, this method also takes advantage of the advantages of collaborative filtering. When the number of users and evaluation levels are large, the user rating data matrix of collaborative filtering prediction will become relatively dense, which can reduce the sparsity of the matrix and make collaborative filtering more accurate. In this way, we will try to improve the system performance through the integration of the two.
 
-![alt text](https://github.com/ChetanNain/CMPE-255-Final-Project/blob/main/Report/Images/Hybrid.png)
+![alt text](https://github.com/ChetanNain/CMPE-255-Final-Project/blob/main/Paper/Images/Hybrid.png)
 
 # Example Analysis
 
