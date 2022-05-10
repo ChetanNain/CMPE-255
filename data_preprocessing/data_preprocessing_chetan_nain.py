@@ -7,7 +7,7 @@
 
 # ### Importing the required libraries
 
-# In[237]:
+# In[4]:
 
 
 import pandas as pd
@@ -38,7 +38,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # ### Loading the data
 
-# In[81]:
+# In[5]:
 
 
 books_data = pd.read_csv('../data/books_data.csv')
@@ -49,13 +49,13 @@ tags_data = pd.read_csv('../data/tags_data.csv')
 
 # ### Understanding the loaded data and checking shape
 
-# In[82]:
+# In[6]:
 
 
 books_data.head()
 
 
-# In[83]:
+# In[7]:
 
 
 books_data.shape
@@ -63,13 +63,13 @@ books_data.shape
 
 # ### Understanding the null values in the dataset
 
-# In[84]:
+# In[8]:
 
 
 books_data.isnull().sum()
 
 
-# In[85]:
+# In[9]:
 
 
 msno.matrix(books_data)
@@ -83,7 +83,7 @@ msno.matrix(books_data)
 # 
 # Apart form that original title too is a redundant column because of the presence of title column.
 
-# In[86]:
+# In[10]:
 
 
 books_data = books_data.drop(['book_id', 'isbn','original_title'], axis=1)
@@ -93,13 +93,13 @@ books_data = books_data.drop(['book_id', 'isbn','original_title'], axis=1)
 
 # ### Now as we know, the column 'language_code' has a lot of null values. So we will try to impute these null values.
 
-# In[87]:
+# In[11]:
 
 
 nan_in_col  = books_data[books_data['language_code'].isna()]
 
 
-# In[88]:
+# In[12]:
 
 
 nan_in_col
@@ -110,7 +110,7 @@ nan_in_col
 # ### To solve this problem, lets take a small subset of data from the large dataset. 
 # ### In the below example I am taking the subset of data whose author is 'Charles Dickens'
 
-# In[89]:
+# In[13]:
 
 
 charlesDickens = books_data[books_data['authors']=='Charles Dickens']
@@ -123,7 +123,7 @@ charlesDickens
 # 
 # ### This way  we were able to retrieve around 50% of the missing values from the dataset.
 
-# In[90]:
+# In[ ]:
 
 
 books_data['language_code'].fillna('unknown',inplace=True)
@@ -132,7 +132,7 @@ books_data['language_code'] = books_data.groupby('authors')['language_code'].tra
 
 # ### Now checking the data of Charles Dickens again we can see that the author of A Christmas Carol is imputed correctly
 
-# In[91]:
+# In[ ]:
 
 
 charlesDickens = books_data[books_data['authors']=='Charles Dickens']
@@ -141,7 +141,7 @@ charlesDickens
 
 # ### Now checking the values that are still marked us 'unknown'
 
-# In[92]:
+# In[ ]:
 
 
 unk = books_data[books_data['language_code']=='unknown']
@@ -150,7 +150,7 @@ unk.shape
 
 # ### Since we have 584 values still marked as unknown, we will try and impute using the title of the book just in case there are some multiple entries of the same book
 
-# In[93]:
+# In[ ]:
 
 
 books_data['language_code'] = books_data.groupby('title')['language_code'].transform(lambda x: x.replace('unknown',(x.mode()[0])))
@@ -158,7 +158,7 @@ books_data['language_code'] = books_data.groupby('title')['language_code'].trans
 
 # ### Now checking the shape of the dataset again
 
-# In[94]:
+# In[ ]:
 
 
 unk = books_data[books_data['language_code']=='unknown']
@@ -167,13 +167,13 @@ unk.shape
 
 # ### Now imputing the same with the image url and checking the shape again
 
-# In[95]:
+# In[ ]:
 
 
 books_data['language_code'] = books_data.groupby('image_url')['language_code'].transform(lambda x: x.replace('unknown',(x.mode()[0])))
 
 
-# In[96]:
+# In[ ]:
 
 
 unk = books_data[books_data['language_code']=='unknown']
@@ -182,61 +182,61 @@ unk.shape
 
 # ### Now finally we were able to bring down the null values count to 267 from a count of 1000+
 
-# In[97]:
+# In[ ]:
 
 
 msno.matrix(books_data)
 
 
-# In[98]:
+# In[ ]:
 
 
 ratings_data.head()
 
 
-# In[99]:
+# In[ ]:
 
 
 ratings_data.shape
 
 
-# In[100]:
+# In[ ]:
 
 
 ratings_data.isnull().sum()
 
 
-# In[101]:
+# In[ ]:
 
 
 book_tags_data.head()
 
 
-# In[102]:
+# In[ ]:
 
 
 book_tags_data.shape
 
 
-# In[103]:
+# In[ ]:
 
 
 book_tags_data.isnull().sum()
 
 
-# In[104]:
+# In[ ]:
 
 
 tags_data.head()
 
 
-# In[105]:
+# In[ ]:
 
 
 tags_data.shape
 
 
-# In[106]:
+# In[ ]:
 
 
 tags_data.isnull().sum()
@@ -248,7 +248,7 @@ tags_data.isnull().sum()
 
 # ### Lets start with counting the total number of books by every author
 
-# In[107]:
+# In[ ]:
 
 
 books_data['authors'].value_counts()
@@ -258,7 +258,7 @@ books_data['authors'].value_counts()
 
 # ### The below script will help us picking up values where Dean Koontz is a co author as well.
 
-# In[108]:
+# In[ ]:
 
 
 DKBooks = []
@@ -268,7 +268,7 @@ DKBooks
 
 # ### So as per the actual analysis, the total books published by Dean Koontz is 64
 
-# In[109]:
+# In[ ]:
 
 
 len(DKBooks)
@@ -276,7 +276,7 @@ len(DKBooks)
 
 # ### The total number of books by multiple authors in the dataset are
 
-# In[110]:
+# In[ ]:
 
 
 len(auth_books)
@@ -284,7 +284,7 @@ len(auth_books)
 
 # ### Trying to figure out the actual number of books written by a specific author so that it can be included in analysis
 
-# In[111]:
+# In[ ]:
 
 
 auth_books = []
@@ -294,43 +294,43 @@ auth_books[:20]
 
 # ### Splitting the data with comma separated values and then removing the actual author column and joining with the new splitted column
 
-# In[112]:
+# In[ ]:
 
 
 splittedData = books_data['authors'].str.split(',').apply(Series, 1).stack()
 
 
-# In[113]:
+# In[ ]:
 
 
 splittedData.index = splittedData.index.droplevel(-1)
 
 
-# In[114]:
+# In[ ]:
 
 
 splittedData.name = 'authors'
 
 
-# In[115]:
+# In[ ]:
 
 
 del books_data['authors']
 
 
-# In[116]:
+# In[ ]:
 
 
 books_data=books_data.join(splittedData)
 
 
-# In[117]:
+# In[ ]:
 
 
 books_data[books_data['best_book_id']==843]
 
 
-# In[118]:
+# In[ ]:
 
 
 books_data.head()
@@ -346,7 +346,7 @@ books_data.head()
 # 
 # ### And this is proved by the following scripts.
 
-# In[119]:
+# In[ ]:
 
 
 auth_books = []
@@ -354,7 +354,7 @@ books_data.authors.apply(lambda p: auth_books.append(p) if ',' in p else [])
 auth_books[:20]
 
 
-# In[120]:
+# In[ ]:
 
 
 len(auth_books)
@@ -450,7 +450,7 @@ plt.title("Books Released Language Wise (Excluding English)")
 plt.bar(x=langCounts.index,height='Total Counts', data=langCounts);
 
 
-# In[52]:
+# In[1]:
 
 
 get_ipython().system('jupyter nbconvert data_pre*.ipynb --to python')
@@ -634,7 +634,13 @@ for row in tqdm(df_isbn):
     print(result['items'][0]['volumeInfo']['description'])
 
 
-# In[239]:
+# In[2]:
+
+
+books_data['isbn13'] = books_data['isbn13'].astype(int)
+
+
+# In[3]:
 
 
 for index, row in books_data.iterrows():
