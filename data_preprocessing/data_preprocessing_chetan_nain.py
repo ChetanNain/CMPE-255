@@ -7,7 +7,7 @@
 
 # ### Importing the required libraries
 
-# In[1]:
+# In[3]:
 
 
 import pandas as pd
@@ -40,7 +40,7 @@ pd.set_option('display.max_rows',None)
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[2]:
+# In[4]:
 
 
 pip install urllib3
@@ -48,7 +48,7 @@ pip install urllib3
 
 # ### Loading the data
 
-# In[3]:
+# In[5]:
 
 
 books_data = pd.read_csv('../data/books_data.csv')
@@ -59,13 +59,13 @@ tags_data = pd.read_csv('../data/tags_data.csv')
 
 # ### Understanding the loaded data and checking shape
 
-# In[4]:
+# In[6]:
 
 
 books_data.head()
 
 
-# In[5]:
+# In[7]:
 
 
 books_data.shape
@@ -73,10 +73,22 @@ books_data.shape
 
 # ### Understanding the null values in the dataset
 
-# In[6]:
+# In[8]:
 
 
 books_data.isnull().sum()
+
+
+# In[12]:
+
+
+books_data['original_title'][books_data['isbn13']==9780451524940]
+
+
+# In[13]:
+
+
+books_data[books_data['isbn13']==9780451524940]
 
 
 # In[7]:
@@ -234,10 +246,10 @@ book_tags_data.shape
 book_tags_data.isnull().sum()
 
 
-# In[26]:
+# In[1]:
 
 
-tags_data.head()
+tags_data
 
 
 # In[27]:
@@ -460,7 +472,7 @@ plt.title("Books Released Language Wise (Excluding English)")
 plt.bar(x=langCounts.index,height='Total Counts', data=langCounts);
 
 
-# In[ ]:
+# In[53]:
 
 
 get_ipython().system('jupyter nbconvert data_pre*.ipynb --to python')
@@ -468,24 +480,24 @@ get_ipython().system('jupyter nbconvert data_pre*.ipynb --to python')
 
 # ## Adding Summary Dataset
 
-# In[ ]:
+# In[54]:
 
 
 books_data.shape
 
 
-# In[ ]:
+# In[56]:
 
 
 data = []
 
-with open("../data/booksummaries.txt", 'r') as f:
+with open("../data/booksummaries.txt", 'r',encoding='utf-8') as f:
     reader = csv.reader(f, dialect='excel-tab')
     for row in tqdm(reader):
         data.append(row)
 
 
-# In[ ]:
+# In[57]:
 
 
 book_id = []
@@ -504,20 +516,20 @@ books = pd.DataFrame({'book_id': book_id, 'book_name': book_name,
 books.head(2)
 
 
-# In[ ]:
+# In[58]:
 
 
 books.rename(columns = {'book_name':'title'}, inplace = True)
 
 
-# In[ ]:
+# In[59]:
 
 
 books.drop(books[books['genre']==''].index, inplace=True)
 books[books['genre']=='']
 
 
-# In[ ]:
+# In[60]:
 
 
 genres = []
@@ -526,14 +538,14 @@ for i in books['genre']:
 books['genre_new'] = genres
 
 
-# In[ ]:
+# In[61]:
 
 
 all_genres = sum(genres,[])
 len(set(all_genres))
 
 
-# In[ ]:
+# In[62]:
 
 
 def clean_summary(text):
@@ -544,21 +556,21 @@ def clean_summary(text):
     return text
 
 
-# In[ ]:
+# In[63]:
 
 
-books_data['title'] = books_data['title'].apply(lambda x: clean_summary(x))
+# books_data['title'] = books_data['title'].apply(lambda x: clean_summary(x))
 books_data.head(2)
 
 
-# In[ ]:
+# In[64]:
 
 
 books['clean_summary'] = books['summary'].apply(lambda x: clean_summary(x))
 books.head(2)
 
 
-# In[ ]:
+# In[65]:
 
 
 books['title'] = books['title'].apply(lambda x: clean_summary(x))
@@ -571,49 +583,43 @@ books.head(2)
 
 
 
-# In[ ]:
+# In[66]:
 
 
 merged_df=books_data.merge(books, on='title', how='left')
 
 
-# In[ ]:
+# In[67]:
 
 
 merged_df.head(20)
 
 
-# In[ ]:
+# In[68]:
 
 
 merged_df.shape
 
 
-# In[ ]:
+# In[69]:
 
 
 merged_df.isnull().sum()
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
+# In[70]:
 
 
 books_data['summary']=''
 
 
-# In[ ]:
+# In[71]:
 
 
 dummy_data=books_data.head(10)
 
 
-# In[ ]:
+# In[72]:
 
 
 # split = dummy_data['isbn13'].str.split(',', 1, expand=True)
@@ -621,20 +627,20 @@ dummy_data['isbn13'] = dummy_data['isbn13'].astype(int)
 dummy_data['summary']=''
 
 
-# In[ ]:
+# In[73]:
 
 
 API_URL = "https://www.googleapis.com/books/v1/volumes?q=isbn:"
 
 
-# In[ ]:
+# In[74]:
 
 
 df_isbn['isbn'] = df_isbn.head(10)
 df_isbn
 
 
-# In[ ]:
+# In[75]:
 
 
 for row in tqdm(df_isbn):
@@ -646,7 +652,7 @@ for row in tqdm(df_isbn):
 headers("={"Content-Type":"text"}")
 
 
-# In[ ]:
+# In[76]:
 
 
 books_data= books_data.dropna()
@@ -654,7 +660,7 @@ books_data= books_data.dropna()
 books_data['isbn13'] = books_data['isbn13'].astype(int)
 
 
-# In[ ]:
+# In[77]:
 
 
 for index, row in books_data.iterrows():
