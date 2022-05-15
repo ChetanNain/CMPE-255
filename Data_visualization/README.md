@@ -63,7 +63,9 @@ Observation: The above plot helps us to visualize 15 top rated books. Maximum ra
 ![alt text](./Images/Worldcloud%20of%20Authors.png)
 
 
-![alt text](./Images/Worldcloud2_of_Authors2.png)
+
+![alt text](./Images/Percentage_of_Ratings_According_to_Authors.png)
+
 
 
 
@@ -93,19 +95,3 @@ Observation: The above plot helps us to visualize 15 top rated books. Maximum ra
     
 
 ![alt text](./Images/heatmap.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
