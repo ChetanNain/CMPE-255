@@ -142,7 +142,7 @@ Download the dataset from [here]
 
 ### 1. EDA:  
 
-a) Loading the csv files
+aa) Loading the csv files
 
 b) Checking the description of the daatsets like the data types, how many rows , columns, etc
 
@@ -150,19 +150,109 @@ c) Explored the following factors:
 
   - Top Rated Books
   
-![alt text](./Images/top_rated_books.png)
+   ****Observation*****: The below plot helps us to visualize 15 top rated books. Maximum rating of about 4.85
+   - There is a clear visual representation of top rated books according to the average ratings provided on X-axis, which ranges from 0-5 only.
+
+
+![alt text](./images/top_rated_books.png)
   
   - Popular Books
-  
-![alt text](./Images/Popular_book.png)
+  *****Observation*****: The below plot helps us to visualize Popular Book in the dataset.
+![alt text](./images/Popular_book.png)
   
   - Top Authors
   
-![alt text](./Images/Top%20Authors.png)
+![alt text](./images/Top%20Authors.png)
   
   - Percentage of Ratings According to Authors
   
-![alt text](./Images/Percentage_of_Ratings_According_to_Authors.png)
-  
+![alt text](./images/Percentage_of_Ratings_According_to_Authors.png)
+
+
+### 2. Data visualization:
+
+
+### 2.2.1 Authors with Most Books 
+
+In the below bar graph, the bars are proportional to the values they represent, and the data is visualized using sns barplots. Number of Books has been taken on the X-axis and Author has been taken on the Y-axis. A visual representation of the bars is created by comparing both Number of books and Authors.
+
+
+![alt text](./images/Authors%20with%20Most%20Books%20.png)
+
+
+### 2.2.2 Ratings and Avarage Ratings of 2004/2005/2006
+
+The below poltly graphs represents Ratings and Avarage Ratings of 2004/2005/2006
+
+![alt text](./images/Ratings_and_Avarage_Ratings_of_2004%3A2005%3A2006.png)
+
+
+### 2.2.3 Worldcloud of Authors
+
+Creating string variables for authors and original_title, also creating a function to plot WordCloud()
+
+Displaying most frequent words in author names
+
+
+![alt text](./images/Worldcloud%20of%20Authors.png)
+
+Displaying most frequent words in title names
+
+
+![alt text](./images/Worldcloud2_of_Authors2.png)
+
+
+
+
+## 2.3 Number of books in each year
+
+In the below histplot graphs, the bars are proportional to the values they represent, and the data is visualized using sns barplots. original_publication_year has been taken on the X-axis and Count has been taken on the Y-axis. A visual representation of the bars is created by comparing both original_publication_year and Counts.
+
+![alt text](./images/Number_of_books_in_each_year.png)
+
+
+## 2.4. Language
+
+The books.csv contains information on the languages of the books, as you might have noticed.There are some books in other languages in the dataset.There are often multiple editions of a book (both in the same language and in different languages).According to this dataset, the most popular edition was included, which for some books is their original language.
+
+Number of Books released in a specific Language (English included)
+
+![alt text](./images/No_of_Books_%20(English%20included).png)
+
+Number of Books released in a specific Language (English excluded)
+
+![alt text](./images/Number%20of%20Books%20released%20in%20a%20specific%20Language%20(English%20excluded).png)
+
+
+## 2.5. Treemap
+    
+ The following treemap displays hierarchical data as nested rectangles. Each group is represented by a rectangle, whose area varies according to its    value.
+ 
+![alt text](./images/treemap.png)
+
+
+## 2.6. Heatmap
+    
+
+![alt text](./images/heatmap.png)
+
+
+### 3. Data Preprocessing:
+
+
+
+
+
+### 3. Model building:
+
+
+
+
+### 4. Recommendation:
+
+
+
+
+### Conclusion:
 
 
