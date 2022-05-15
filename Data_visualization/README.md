@@ -3,70 +3,99 @@
 # Data Visualization
 ---------------------
 
-### Top Rated Books
+### 1.Ratings Distribution    
+    
+    
+![alt text](./Images/rating_distribution.png)
 
+
+### 1.1 Top Rated Books
+Observation: The above plot helps us to visualize 15 top rated books. Maximum rating of about 4.85
+.There is a clear visual representation of top rated books according to the average ratings provided on X-axis, which ranges from 0-5 only.
     
     
 ![alt text](./Images/top_rated_books.png)
 
-Observation: The above plot helps us to visualize 15 top rated books. Maximum rating of about 4.85
+
+## 1.2 Popular Book
+
+![alt text](./Images/Popular_book.png)
+
+
+![alt text](./Images/Treemap_popular_book.png)
 
 
 
-### Average Ratings Distribution
+### 1.3 Best 15 books by Average rating
+
+![alt text](./Images/Best%2015%20books%20by%20Average%20rating.png)
+
+
+# 2. Authors
+
+
+### 2.2 Authors with Most Books 
+
+![alt text](./Images/Authors%20with%20Most%20Books%20.png)
+
+
+### 2.3 Top Authors
+
+![alt text](./Images/Top%20Authors.png)
+
+![alt text](./Images/Treemap_popular_book.png)
+
+
+### 2.4  Percentage of Ratings According to Authors
+
+![alt text](./Images/Percentage_of_Ratings_According_to_Authors.png)
+
+
+
+### 2.5 Ratings and Avarage Ratings of 2004/2005/2006
+
+![alt text](./Images/Ratings_and_Avarage_Ratings_of_2004%3A2005%3A2006.png)
+
+
+### 2.6 Worldcloud of Authors
+
+
+![alt text](./Images/Worldcloud%20of%20Authors.png)
+
+
+![alt text](./Images/Worldcloud2_of_Authors2.png)
+
+
+
+## 3. Number of books in each year
+
+![alt text](./Images/Number_of_books_in_each_year.png)
+
+
+## 4. Language
+
+
+
+![alt text](./Images/No_of_Books_%20(English%20included).png)
+
+
+
+![alt text](./Images/Number%20of%20Books%20released%20in%20a%20specific%20Language%20(English%20excluded).png)
+
+
+## 5. Treemap
     
     
-    
-
-![alt text](./Images/avg_rating.png)
-
-Observation: This visualize the Average ratings for the books in the dataset.
-
-### Top Authors
-
-    
-    
-
-![alt text](./Images/topauthors.png)
-
-Observation: This visualize Top Authors for the books in the dataset.
-
-
-### Treemap
-    
-    
-
-
 ![alt text](./Images/treemap.png)
-Observation: This visualize dataset in form of Treemap
-### Heatmap
+
+
+## 6. Heatmap
     
 
 ![alt text](./Images/heatmap.png)
 
-Observation: This will returns the correlation between all the columns
-
-### Number of books in each year
-   
-
-![alt text](./Images/histplot_numberofbooksinyear.png)
-
-Observation: The histogram plot to visualize the number of books published each year.
 
 
-### Number of Authors Ratings Rates
-    
-
-![alt text](./Images/Ratings%20Rates.png)
-
-Observation: The Number of Authors Ratings Rates for year 2015 and 2016.
-
-### Stopwords of Authors
-    
-
-![alt text](./Images/getstopwords.png)
-
-Observation: This will returns the Stopwords of author
 
 
 
