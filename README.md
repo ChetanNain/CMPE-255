@@ -100,4 +100,69 @@ The dataset links: http://www2.informatik.uni-freiburg.de/~cziegler/BX/ | https:
 | tag_name | Text | Book_Rating|
 
 
+## About Dataset
+
+There are several ways to explore the dataset, including searching for which books you should read next (there are very few free content recommendation systems that recommend books last I checked), creating a word cloud based on the books you have read, and creating a list of books you want to read.
+
+## Project Overview
+
+Resources:
+
+Programming language: Python 3.7,
+
+Packages used: pandas, numpy, matplotlib, seaborn, sklearn, tensorflow.
+
+## Project goal:
+
+To build a recommendation system that will recommend a user top 5 books of his/her interest.
+
+#### Project architecture:
+
+**Exploratory data analysis (EDA):**
+  - Visualization on some important parts like most rated books, most popular books, most popular authors, most number of ratings
+
+**Data Preprocessing:**
+  - Data cleansing
+  - Nan value treatment
+  - Extraction of relevant featuress
+  
+**Model building:**
+  - Splitting data into train and test set
+  - Neural Network creation(Using functional API)
+  - Training on train data and validating on test data
+
+**Recommendation:**
+  - Loading model
+  - Creating a function for recommendation
+
+### Data Collection:
+
+Download the dataset from [here]
+
+
+### 1. EDA:  
+
+a) Loading the csv files
+
+b) Checking the description of the daatsets like the data types, how many rows , columns, etc
+
+c) Explored the following factors:
+
+  - Top Rated Books
+  
+![alt text](./Images/top_rated_books.png)
+  
+  - Popular Books
+  
+![alt text](./Images/Popular_book.png)
+  
+  - Top Authors
+  
+![alt text](./Images/Top%20Authors.png)
+  
+  - Percentage of Ratings According to Authors
+  
+![alt text](./Images/Percentage_of_Ratings_According_to_Authors.png)
+  
+
 
