@@ -180,14 +180,8 @@ In the below bar graph, the bars are proportional to the values they represent, 
 ![alt text](./images/Authors%20with%20Most%20Books%20.png)
 
 
-### 2.2.2 Ratings and Avarage Ratings of 2004/2005/2006
 
-The below poltly graphs represents Ratings and Avarage Ratings of 2004/2005/2006
-
-![alt text](./images/Ratings_and_Avarage_Ratings_of_2004%3A2005%3A2006.png)
-
-
-### 2.2.3 Worldcloud of Authors
+### 2.2.2 Worldcloud of Authors
 
 Creating string variables for authors and original_title, also creating a function to plot WordCloud()
 
