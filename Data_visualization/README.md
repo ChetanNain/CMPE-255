@@ -67,14 +67,8 @@ Interactive Barplot between Percentage of Ratings and Authors and visulized the 
 
 
 
-### 2.5 Ratings and Avarage Ratings of 2004/2005/2006
 
-The below poltly graphs represents Ratings and Avarage Ratings of 2004/2005/2006
-
-![alt text](./Images/Ratings_and_Avarage_Ratings_of_2004%3A2005%3A2006.png)
-
-
-### 2.6 Worldcloud of Authors
+### 2.5 Worldcloud of Authors
 
 Creating string variables for authors and original_title, also creating a function to plot WordCloud()
 
