@@ -248,7 +248,7 @@ In preprocessing we are doing three major steps:
 4. Summary generation using google books api.
 5. Clearning the dataset so that it can be used for model preparation.
 
-
+For details on data preprocessing please visit [here](https://github.com/ChetanNain/CMPE-255-Final-Project/tree/main/data_preprocessing)
 
 ### 3. Model building:
 
