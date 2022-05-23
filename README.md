@@ -240,7 +240,7 @@ Updatable
 Trustworthinessble
 Data interpretability
 
-In preprocessing we are doing three major steps:
+In preprocessing we are doing five major steps:
 
 1. Checking for null values and replacing with suitable values
 2. Detecting Outliers
