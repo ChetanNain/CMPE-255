@@ -229,11 +229,30 @@ Displaying most frequent words in author names
 
 ### 3. Data Preprocessing:
 
+Data preparation is the process of transforming raw data into an understandable format. We can't work with raw data, thus this is an important step in the data mining process. Make sure the data is of excellent quality before applying machine learning or data mining technologies.
 
+Data preparation is used to guarantee that the data is of high quality. Quality may be determined using the following criteria:
+
+Accuracy
+Checking for completeness
+Consistency
+Updatable
+Trustworthinessble
+Data interpretability
+
+In preprocessing we are doing three major steps:
+
+1. Checking for null values and replacing with suitable values
+2. Detecting Outliers
+3. Organizing the data by getting it into proper format so that it can be used for analysis
+4. Summary generation using google books api.
+5. Clearning the dataset so that it can be used for model preparation.
 
 
 
 ### 3. Model building:
+
+In the project we are building a hybrid model which is to be built on collaborative filterning and content based to recommend the right book. The model is expected to give a better accuracy as it helps is getting the best of both the models.
 
 
 
