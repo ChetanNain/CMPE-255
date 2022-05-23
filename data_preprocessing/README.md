@@ -61,20 +61,6 @@ Outliers were treated using the following methods:
  b.) Substitute with the median or a fixed value
  
  
- ### The below screenshot is the box plot for the average ratings.
- 
- <p>
-    <img src="./images/box plot.png" width="800" height="600" />
-</p>
- 
- 
-  ### The below screenshot is the box plot for the year of publication of various books.
- 
-  <p>
-    <img src="./images/box plot 2.png" width="800" height="600" />
-</p>
- 
- 
  ## 3. Organizing the data by getting it into proper format so that it can be used for analysis. 
  
  ## In the dataset we have to clean the data for multiple authors so that the authors that are comma separated can be splitted into multiple rows. This way they can come under proper analysis.
