@@ -77,10 +77,6 @@ Displaying most frequent words in author names
 
 ![alt text](./Images/Worldcloud%20of%20Authors.png)
 
-Displaying most frequent words in title names
-
-
-![alt text](./Images/Worldcloud2_of_Authors2.png)
 
 
 
