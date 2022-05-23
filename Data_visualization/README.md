@@ -2,6 +2,9 @@
 
 # Data Visualization
 ---------------------
+A data visualization is a graphical representation of information and data.Visualizing data using charts, graphs, and maps makes it easier to see and understand trends, outliers, and patterns in data.
+
+
 
 ### 1.Ratings Distribution    
     
