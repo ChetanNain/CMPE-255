@@ -91,3 +91,21 @@ Outliers were treated using the following methods:
   <p>
     <img src="./images/cleaned author.png" width="1000" height="400" />
 </p>
+
+
+ ## 4. Summary and Genere extraction from Google Books Api
+ 
+ To extract the summary we have used the google api where we are hitting the api using GET method with isbn13 as the query parameter. 
+ The url that we have used is "https://www.googleapis.com/books/v1/volumes?q=isbn:" adding the isbn13 at the end of it. 
+ The response that we are getting on hitting the api is in the form of JSON. After parsing them we are able to pull the data that we required from the dataset.
+
+Sample screenshot of the response:
+
+
+<img width="819" alt="Screen Shot 2022-05-23 at 4 05 56 PM" src="https://user-images.githubusercontent.com/59989065/169918475-437dd687-f281-40df-b585-21745c357095.png">
+
+ 
+ ## 5.  Cleaning the extracted summary.
+ Its important from our end to clean the dataset extracted from the google api. So we created a simple function using the regex functions. The code snipped for the function is :
+ 
+ <img width="463" alt="Screen Shot 2022-05-23 at 4 15 53 PM" src="https://user-images.githubusercontent.com/59989065/169919266-8700187e-1a79-4da0-8d87-d1956d11012a.png">
