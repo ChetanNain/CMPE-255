@@ -2,6 +2,9 @@
 
 # Data Visualization
 ---------------------
+A data visualization is a graphical representation of information and data.Visualizing data using charts, graphs, and maps makes it easier to see and understand trends, outliers, and patterns in data.
+
+
 
 ### 1.Ratings Distribution    
     
@@ -77,10 +80,6 @@ Displaying most frequent words in author names
 
 ![alt text](./Images/Worldcloud%20of%20Authors.png)
 
-Displaying most frequent words in title names
-
-
-![alt text](./Images/Worldcloud2_of_Authors2.png)
 
 
 

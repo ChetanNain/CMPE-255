@@ -10,6 +10,8 @@ The content-based approach uses additional information about users and/or items.
    
 The main idea of content-based methods is to try to build a model, based on the available “features”, that explain the observed user-item interactions. 
 
+
+
 ### Limitations
 
 Basis of the findings, our content-based filtering approach has the following limitations:
@@ -33,6 +35,16 @@ It is further divided into two subparts:
 * 2 Item - Item:
   To make a new recommendation to a user, the idea of item-item method is to find items similar to the ones the user already “positively” interacted with. Two items are considered to be similar if most of the users that have interacted with both of them did it in a similar way. This method is said to be “item-centred” as it represent items based on interactions users had with them and evaluate distances between those items.
   
+### Memory Based Collaborative Filtering Model
+
+Limitations of Memory-Based Collaborative Filtering Recommendation Method
+       
+1.) Memory-based filtering systems do not scale easily, even with 53K distinct users it took a while to find similar users to a single user.
+       
+2.) When using huge datasets, the memory-based collaborative filtering technique is close to impractical.
+       
+3.) This technique also has the “cold-start” problem, it’s hard to get recommendations for new users or recommend new products.
+      
   <image here item>
   
 ## Hybrid Approach:
