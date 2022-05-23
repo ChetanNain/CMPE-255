@@ -24,6 +24,15 @@ In content based methods, the recommendation problem is casted into either a cla
 The content-based approach uses additional information about users and/or items. This filtering method uses item features to recommend other items similar to what the user likes and also based on their previous actions or explicit feedback. If we consider the example for a books recommender system, the additional information can be, the age, the sex, the job or any other personal information for users as well as the category, the main character, the writing style, length or other characteristics for the books i.e the items.
    
 The main idea of content-based methods is to try to build a model, based on the available “features”, that explain the observed user-item interactions. 
+
+### Limitations
+
+Basis of the findings, our content-based filtering approach has the following limitations:
+Our recommender chose some films that a person searching for 'my sunshine away' titles would most likely find offensive. To enhance our system, we may replace TF-IDF with word counts and investigate alternative similarity scores.
+As of now, our algorithm solely evaluates the storyline summaries of each books. 
+As of now, our algorithm simply evaluates the book summaries of each book. Other factors, such as writers and genre, will almost certainly help us identify comparable movies.
+Our present approach only recommends movies that have comparable properties. As a result, our recommender is missing books from different genres that the user may love. To overcome this, we'd have to employ collaborative filtering, but our dataset didn't include any user information.
+ 
 <Insert similar summary image here>
   
 ## Hybrid Approach:
