@@ -8,7 +8,7 @@
 # # Importing Libraries
 # 
 
-# In[73]:
+# In[1]:
 
 
 import pandas as pd
@@ -30,42 +30,42 @@ warnings.filterwarnings('ignore')
 
 # # Importing Datasets
 
-# In[74]:
+# In[2]:
 
 
 vamsidhar_books_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255-Final-Project/data/books_data.csv')
 vamsidhar_ratings_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255-Final-Project/data/books_ratings_data.csv')
 vamsidhar_book_tags_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255-Final-Project/data/book_tags_data.csv')
-vamsidhar_tags_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255-Final-Project/data/book_tags_data.csv')
+vamsidhar_tags_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255-Final-Project/data/tags_data.csv')
 
 
 # ### Books Data
 
-# In[155]:
+# In[3]:
 
 
 print(vamsidhar_books_data.shape)
 
 
-# In[156]:
+# In[4]:
 
 
 print(list(vamsidhar_books_data.columns))
 
 
-# In[123]:
+# In[5]:
 
 
 vamsidhar_books_data.head()
 
 
-# In[124]:
+# In[6]:
 
 
 vamsidhar_books_data.dtypes
 
 
-# In[75]:
+# In[7]:
 
 
 vamsi_important_columns = ['title','authors','average_rating','ratings_count','work_text_reviews_count']
@@ -73,7 +73,7 @@ vamsi_important_columns = ['title','authors','average_rating','ratings_count','w
 
 # ## Ratings Dataset
 
-# In[139]:
+# In[8]:
 
 
 vamsidhar_ratings_data.shape
@@ -81,14 +81,14 @@ vamsidhar_ratings_data.shape
 
 # ## Ratings data
 
-# In[141]:
+# In[9]:
 
 
 print(vamsidhar_ratings_data.shape)
 print(list(vamsidhar_ratings_data.columns))
 
 
-# In[142]:
+# In[10]:
 
 
 vamsidhar_ratings_data.head()
@@ -97,7 +97,7 @@ vamsidhar_ratings_data.head()
 # ## Ratings Distribution
 # 
 
-# In[145]:
+# In[11]:
 
 
 plt.rc("font", size = 15)
@@ -119,7 +119,7 @@ plt.savefig("Ratings Distribution.jpg", bbox_inches = "tight", dpi = 100)
 
 # ### Sorting data according to the average ratings
 
-# In[81]:
+# In[12]:
 
 
 sortedData = vamsidhar_books_data[vamsidhar_books_data['ratings_count']>=1500]
@@ -153,7 +153,7 @@ print(sortedData)
 
 # There is a clear visual representation of top rated books according to the average ratings provided on X-axis, which ranges from 0-5 only.
 
-# In[80]:
+# In[13]:
 
 
 def top_rated_books(books_data):
@@ -168,7 +168,7 @@ top_rated_books(vamsidhar_books_data)
 
 # ## 1.2 Popular Book
 
-# In[169]:
+# In[14]:
 
 
 top_popular = vamsidhar_books_data.sort_values('ratings_count', ascending=False)
@@ -178,7 +178,7 @@ fig = px.bar(fifty_top_popular, x="ratings_count", y="original_title", title='To
 fig.show()
 
 
-# In[170]:
+# In[15]:
 
 
 fig = px.treemap(fifty_top_popular, path=['original_title'], values='ratings_count',title='Popular Books', width=1000, height=700)
@@ -191,29 +191,11 @@ fig.show()
 
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
 # ### 1.3 Best 15 books by Average rating
 
 # In the below bar graph, the bars are proportional to the values they represent, and the data is visualized using sns barplots. Average score has been taken on the X-axis and book title has been taken on the Y-axis. A visual representation of the bars is created by comparing both Average Score and book titles.
 
-# In[82]:
+# In[16]:
 
 
 plt.figure(figsize=(10,10))
@@ -230,7 +212,7 @@ plt.ylabel('Book Title')
 # 
 # 
 
-# In[83]:
+# In[17]:
 
 
 top_rated_books = vamsidhar_books_data[['title','average_rating']]
@@ -241,7 +223,7 @@ top_rated_books = top_rated_books[['title','average_rating']]
 top_rated_books.head()
 
 
-# In[84]:
+# In[18]:
 
 
 top_rated_books.tail()
@@ -264,7 +246,7 @@ top_rated_books.tail()
 
 # In this case, I have plotted average_rate from book data and represented numeric data as bars by                   dividing it into bins and visually representing each bin. Here it is very handy for quickly changing               the property of the bins or changing the display
 
-# In[85]:
+# In[19]:
 
 
 def avg_rating(vamsidhar_books_data):
@@ -276,7 +258,7 @@ avg_rating(vamsidhar_books_data)
 
 # 
 
-# In[86]:
+# In[20]:
 
 
 vamsidhar_books_data
@@ -287,13 +269,13 @@ vamsidhar_books_data
 # ### 2.1 Filter Authors 
 # 
 
-# In[89]:
+# In[21]:
 
 
 vamsidhar_books_data.authors.value_counts()
 
 
-# In[90]:
+# In[22]:
 
 
 a = []
@@ -301,7 +283,7 @@ vamsidhar_books_data.authors.apply(lambda x: a.append(x) if ',' in x else [])
 a[:10]
 
 
-# In[92]:
+# In[23]:
 
 
 print('Number of books with multi-authors is {}.'.format(len(a)))
@@ -327,14 +309,14 @@ print('Number of books with multi-authors is {}.'.format(len(a)))
 # Problem: it will cost time and effort
 # So I decided to try playing with the recent data as possible, and maybe someone like the illustrator affect the book rating.
 
-# In[95]:
+# In[24]:
 
 
 authors_list = vamsidhar_books_data['authors'].apply(lambda x: [a for a in x.split(', ')] if ',' in x else x)
 authors_list.head()
 
 
-# In[96]:
+# In[25]:
 
 
 splitted_authors = authors_list.apply(lambda x: pd.Series(x)).stack().reset_index(level=1, drop=True)
@@ -342,14 +324,14 @@ splitted_authors.name = 'authors'
 splitted_authors.head()
 
 
-# In[98]:
+# In[26]:
 
 
 vamsi_df_edited_authors = vamsidhar_books_data[vamsi_important_columns].drop('authors', axis=1).join(splitted_authors)
 vamsi_df_edited_authors.head()
 
 
-# In[99]:
+# In[27]:
 
 
 vamsi_df_edited_authors.authors.value_counts()
@@ -359,7 +341,7 @@ vamsi_df_edited_authors.authors.value_counts()
 # 
 # 
 
-# In[100]:
+# In[28]:
 
 
 def vamsi_plot_authors_by(df, title, xlabel, n=15, ylabel='Author', y_size=7):
@@ -373,14 +355,14 @@ def vamsi_plot_authors_by(df, title, xlabel, n=15, ylabel='Author', y_size=7):
 # ### 2.2 Authors with Most Books 
 # 
 
-# In[101]:
+# In[29]:
 
 
 authors_most_with_books = vamsi_df_edited_authors.authors.value_counts()
 authors_most_with_books.head(15)
 
 
-# In[102]:
+# In[30]:
 
 
 vamsi_plot_authors_by(authors_most_with_books, 'Authors with most books', 'Number of Books', 30)
@@ -405,7 +387,7 @@ vamsi_plot_authors_by(authors_most_with_books, 'Authors with most books', 'Numbe
 
 # Interactive Barplot between count and the authors and visualized top authors of books in the dataset in the form of bar graph.
 
-# In[103]:
+# In[31]:
 
 
 def topauthors(vamsidhar_books_data):
@@ -419,30 +401,30 @@ def topauthors(vamsidhar_books_data):
 topauthors(vamsidhar_books_data)
 
 
-# In[171]:
+# In[55]:
 
 
-fifty_top_authors = top_rated[:50]
+fifty_top_authors = vamsidhar_books_data[:50]
 fig = px.treemap(fifty_top_authors, path=['authors'], values='average_rating',title='Popular Authors', width=1000, height=700)
 fig.show()
 
 
 # ### 2.4  Percentage of Ratings According to Authors
 
-# In[235]:
+# In[56]:
 
 
 from plotly.offline import init_notebook_mode, iplot, plot
 
 
-# In[230]:
+# In[57]:
 
 
 data1= vamsidhar_books_data.head(20)
 data1.rename(columns={'ratings_1':'R1', 'ratings_2':'R2','ratings_3':'R3','ratings_4':'R4','ratings_5':'R5'}, inplace=True)
 
 
-# In[231]:
+# In[58]:
 
 
 author_list= list(data1['authors'].unique())
@@ -463,7 +445,7 @@ ax.set(xlabel='Percentage of Ratings', ylabel='Authors',title = "Percentage of R
 plt.show()
 
 
-# In[236]:
+# In[59]:
 
 
 df2004 = vamsidhar_books_data[vamsidhar_books_data.original_publication_year == 2004].iloc[:200,:]
@@ -521,7 +503,7 @@ iplot(fig)
 # 
 # 
 
-# In[110]:
+# In[60]:
 
 
 def getpiechart(vamsidhar_books_data):
@@ -560,7 +542,7 @@ getpiechart(vamsidhar_books_data)
 
 # Creating string variables for authors and original_title, also creating a function to plot WordCloud()
 
-# In[178]:
+# In[63]:
 
 
 stop_words=set(STOPWORDS)
@@ -568,7 +550,13 @@ author_string = " ".join(vamsidhar_books_data['authors'])
 title_string = " ".join(vamsidhar_books_data['original_title'])
 
 
-# In[179]:
+# In[68]:
+
+
+vamsidhar_books_data.head()
+
+
+# In[64]:
 
 
 def wordcloud(string):
@@ -582,7 +570,7 @@ def wordcloud(string):
 # 
 # 
 
-# In[181]:
+# In[65]:
 
 
 wordcloud(author_string)
@@ -591,7 +579,7 @@ wordcloud(author_string)
 # Displaying most frequent words in title names
 # 
 
-# In[182]:
+# In[66]:
 
 
 wordcloud(title_string)
@@ -609,7 +597,7 @@ wordcloud(title_string)
 # 
 # 
 
-# In[109]:
+# In[43]:
 
 
 # Visualising Explicit Rating Countsdef get_histplot(books_data):
@@ -623,7 +611,7 @@ get_histplot(vamsidhar_books_data)
 
 # The books.csv contains information on the languages of the books, as you might have noticed.Goodreads is an english language site, so this is interesting.There are some books in other languages in the dataset.There are often multiple editions of a book (both in the same language and in different languages).According to this dataset, the most popular edition was included, which for some books is their original language.
 
-# In[118]:
+# In[44]:
 
 
 lang_counts = pd.DataFrame(vamsidhar_books_data['language_code'].value_counts())
@@ -631,7 +619,7 @@ lang_counts.columns = ['counts']
 lang_counts
 
 
-# In[119]:
+# In[45]:
 
 
 plt.figure(figsize=(16,8))
@@ -639,7 +627,7 @@ plt.title("Number of Books released in a specific Language (English included).",
 plt.bar(x=lang_counts.index,height='counts', data=lang_counts);
 
 
-# In[120]:
+# In[46]:
 
 
 lang_counts = lang_counts.drop(["en-US", "en-GB", "eng", "en-CA"])
@@ -647,7 +635,7 @@ lang_counts = lang_counts.drop(["en-US", "en-GB", "eng", "en-CA"])
 
 # Number of Books released in a specific Language (English excluded)
 
-# In[121]:
+# In[47]:
 
 
 plt.figure(figsize=(16,8))
@@ -676,7 +664,7 @@ plt.bar(x=lang_counts.index,height='counts', data=lang_counts);
 
 # The following treemap displays hierarchical data as nested rectangles. Each group is represented by a rectangle, whose area varies according to its value.
 
-# In[104]:
+# In[48]:
 
 
 def get_treemap(vamsidhar_books_data):
@@ -699,7 +687,7 @@ get_treemap(vamsidhar_books_data)
 #            =>dataframe
 # 
 
-# In[105]:
+# In[49]:
 
 
 heatmap1= vamsidhar_books_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255-Final-Project/data/books_data.csv')
@@ -708,19 +696,19 @@ heatmap3= vamsidhar_book_tags_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255
 heatmap4= vamsidhar_tags_data = pd.read_csv('/Users/vamsidharreddy/CMPE-255-Final-Project/data/book_tags_data.csv')
 
 
-# In[106]:
+# In[50]:
 
 
 vamsidhar_df = heatmap1.drop(['id','book_id','best_book_id','work_id','isbn13'],axis=1)
 
 
-# In[107]:
+# In[51]:
 
 
 vamsidhar_df
 
 
-# In[108]:
+# In[52]:
 
 
 def get_heatmap(vamsidhar_df):
@@ -736,8 +724,14 @@ get_heatmap(vamsidhar_df)
 
 
 
-# In[ ]:
+# In[53]:
 
 
 get_ipython().system('jupyter nbconvert Data*.ipynb --to python')
+
+
+# In[ ]:
+
+
+
 
