@@ -38,8 +38,11 @@ It is further divided into two subparts:
 ### Memory Based Collaborative Filtering Model
 
 Limitations of Memory-Based Collaborative Filtering Recommendation Method
+       
 1.) Memory-based filtering systems do not scale easily, even with 53K distinct users it took a while to find similar users to a single user.
+       
 2.) When using huge datasets, the memory-based collaborative filtering technique is close to impractical.
+       
 3.) This technique also has the “cold-start” problem, it’s hard to get recommendations for new users or recommend new products.
       
   <image here item>
