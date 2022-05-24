@@ -253,16 +253,9 @@ For details on data preprocessing please visit [here](https://github.com/ChetanN
 ### 3. Model building:
 
 In the project we are building a hybrid model which is to be built on collaborative filterning and content based to recommend the right book. The model is expected to give a better accuracy as it helps is getting the best of both the models.
+It is evident that both the techniques are equally good and complement each other. We explored and studied recommendation technologies based on content filtering and user collaborative filtering and propose a hybrid recommendation algorithm based on content and user collaborative filtering. This method not only makes use of the advantages of content filtering but also can carry out similarity matching filtering for all items, especially when the items are not evaluated by any user, which can be filtered out and recommended to users, thus avoiding the problem of early level.
 
-
-
-
-### 4. Recommendation:
-
-
-
-
-### Conclusion:
+At the same time, this method also takes advantage of the advantages of collaborative filtering. When the number of users and evaluation levels are large, the user rating data matrix of collaborative filtering prediction will become relatively dense, which can reduce the sparsity of the matrix and make collab
 
 ### Contributers
 
