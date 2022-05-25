@@ -310,6 +310,22 @@ In practical cases when determining the angle between two vectors is difficult, 
 where a and b are the vectors of items a and b, and ||a|| and ||b|| are the vector's Euclidean norm or magnitude. This formula is better suited for machine learning applications where the vector values are known.
 
 
+### Conclusion
+
+#### The Hybrid Model
+To get the best results we opted for Sigmoid based Content Recommendation and User-item based Collaborative filtering Method. The combination of two gave us the best results. With the two algorithm we were able to get the right recommendations.
+
+
+To put it another way, it is only one of many, many techniques available, and it is actually rather straightforward. Nonetheless, I find the recommendations to be rather accurate and intriguing, so it is a strategy that works well and is, computationally speaking, extremely inexpensive!
+
+Lastly we did a thorough testing but keeping the project deadlines we relied mostly on Human interpretation and did a thorough testing. We also calculated the error in our algorithm and made tweeks so as to get maximum accuracy percentage. 
+Human Interpretation: Human interpretation is required to ensure that the recommender does not merely recommend popular things to the user.
+Mean Absolute Error: In a model-based recommender system, this is the average of the difference between actual and anticipated values.
+Mean Squared Error: Mean Squared Error, like MAE, accounts for the negative sign by squaring the predictions.
+The average resemblance of all recommended items to a user is referred to as intra-list similarity.
+Personalization: It is also critical to consider how individualized the recommendations are.
+
+
 ### Contributers
 
 | Name | Id | GitHub User Name  |
