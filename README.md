@@ -257,6 +257,59 @@ It is evident that both the techniques are equally good and complement each othe
 
 At the same time, this method also takes advantage of the advantages of collaborative filtering. When the number of users and evaluation levels are large, the user rating data matrix of collaborative filtering prediction will become relatively dense, which can reduce the sparsity of the matrix and make collab
 
+### 4. Comparision :
+
+
+### Collaborative vs Content Based 
+
+
+
+
+
+
+### Collaborative Filtering
+
+![image](https://user-images.githubusercontent.com/59989065/170367675-a1c66640-159c-4200-9ddf-db2d60dfb3ae.png)
+
+
+####  Memory Based
+There are two types of Memory-Based Collaborative Filtering approaches: user-item filtering and item-item filtering. A user-item filtering algorithm takes a certain user, finds people who are similar to that user based on rating similarity, then recommends goods that those similar users enjoyed. Item-item filtering, on the other hand, will take an item and locate users who liked it, as well as other items that those users or similar users liked. It accepts products and generates recommendations for additional goods. In our algorithm we are using user-item approach rating data which we are mapping to other users trying to predict what they may like. 
+
+#### Model Based
+It is not necessary to recall the basis matrix while using model-based collaborative filtering. Instead, machine models are employed to anticipate and compute how each product is rated by a client. Machine learning is used in these system algorithms to anticipate unrated items based on user ratings. These algorithms are further classified as Matrix factorization-based techniques, deep learning methods, and clustering algorithms.
+The simple cluster approach, similar to K-Nearest Neighbor, is typically used to discover the nearest embedding or neighbor consisting of a comparable matrix used for a product or a customer embedding. The matrix factorization approach is distinct from examining and studying the rate of rating matrix in an algebra setting, and it serves two purposes. First and foremost, the goal is to lower the dimension of the rating matrix. The second goal of this technique is to find perspective aspects under the grading matrix, which will result in various suggestions.
+
+
+### Content Based Filtering
+
+![image](https://user-images.githubusercontent.com/59989065/170375423-c2a76281-014a-4019-840e-4cea6915e8a6.png)
+
+
+#### Sigmoid Kernel
+A 'kernel technique' consists of two parts:
+1. An embedding or feature space mapping
+2. A learning technique for identifying linear patterns in that space
+
+The identified patterns have a wide range of applications in pattern mining, clustering, classification, and other fields. More intelligent systems, such as recommendation engines and decision-making systems, can be created based on such first-level tasks. The mapping is known officially as a kernel function. It represents a similarity score between the data points in addition to mapping from non-linear space to linear space (like dot product).
+
+The following are the major steps of a recommendation system:
+1. get data 
+2. prepare data (e.g. kernel-PCA for dimension reduction)
+3. Using this data, determine who likes what and create a pattern; create a regression or classification model to represent the same - for example, SVM (a kernel method)
+4. Create a ranking table based on some sort of similarity criteria (again a kernel function can be used as similarity metric).
+
+#### Cosine Similarity
+The cosine similarity scale runs from -1 to 1. 1 implies that the things are the same, but -1 indicates that the items are distinct. Even though the blue jet ski vector is larger than the orange one, the cosine similarity in example (b) is 1 (similar). This implies that cosine similarity is independent of vector magnitude or size. It is simply determined by the vectors' direction. The similarity increases as the angle between the vectors decreases.
+
+In practical cases when determining the angle between two vectors is difficult, we may utilize the cosine formulation below, which is derived from the inner product of two vectors in linear algebra:
+
+
+![image](https://user-images.githubusercontent.com/59989065/170376794-1ee3517d-6f77-4141-8ba8-34641c06ea68.png)
+
+
+where a and b are the vectors of items a and b, and ||a|| and ||b|| are the vector's Euclidean norm or magnitude. This formula is better suited for machine learning applications where the vector values are known.
+
+
 ### Contributers
 
 | Name | Id | GitHub User Name  |
