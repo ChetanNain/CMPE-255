@@ -4,8 +4,8 @@
 - [Recommendation System](#recommendation-system)
 - [Quick guide](#quick-guide)
 - [Source Dataset](#source-dataset)
-
-
+- [Project Overview](#project-overview)
+- [Conclusion](#conclusion)
 
 
 ## Recommendation System
@@ -257,14 +257,10 @@ It is evident that both the techniques are equally good and complement each othe
 
 At the same time, this method also takes advantage of the advantages of collaborative filtering. When the number of users and evaluation levels are large, the user rating data matrix of collaborative filtering prediction will become relatively dense, which can reduce the sparsity of the matrix and make collab
 
-### 4. Comparision :
+### 4. Comparison:
 
 
 ### Collaborative vs Content Based 
-
-
-
-
 
 
 ### Collaborative Filtering
